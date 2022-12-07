@@ -10,8 +10,8 @@ export default function Contact({ nom, prenom, email, telephone, button }) {
           Email : {email} <br />
           Téléphone : {telephone}
         </h3>
-        {button ? <button>DELETE</button> : true}
-        
+        {button && <button>DELETE</button>}
+  
       </div>
     </>
   );
