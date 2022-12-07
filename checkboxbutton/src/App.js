@@ -7,8 +7,9 @@ function App() {
     
     <>
     <h1>Exo checkbox/button</h1>
+   
     <Checkbox />
-    
+  
     </>
   );
 }
