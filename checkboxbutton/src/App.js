@@ -1,21 +1,31 @@
 import "./App.css";
 import Bouton from "./components/Bouton";
 import Checkbox from "./components/Checkbox";
-
-import { Route, Routes} from react-router-dom;
+import ContactList from "./components/ContactList";
+import Count from "./components/Count";
+import { Route, Routes} from 'react-router-dom';
+import Home from "./components/pages/Home";
+import {Link} from "react-router-dom";
 
 
 function App() {
 
-    const [on, setOn] = useState(true);
-
-    const change = () =>{
-      setOn(!on);
-    };
     return (
       <>
+      <ul>
+        <Link to={"/"}>Accueil</Link>
+        <Link to={"/contact"}>Contacts</Link>
+        <Link to={"/count"}>Count</Link>
 
-      <Route path="/contact* element ={<ContactList"/>
+      </ul>
+
+      <Routes>
+      <Route path="/" element ={<Home />} />
+       <Route path="/contact" element ={<ContactList />}/>
+        <Route path="/count" element ={<Count />}/>
+    </Routes>
+
+      
       </>
 
     )
